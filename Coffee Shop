@@ -1,0 +1,29 @@
+# Robot Barista
+# Let's make a coffee shop together!! 
+
+# Let's build a robot barista!!!
+
+print("Hello there, welcome to Hugo's Coffee Shop!!!)
+
+name = input("What is your name?\n")
+
+print("Hello " + name + ", thank you for coming in today.\n\n")
+
+menu = "Cappucino, Latte, Black Coffee, Espresso"
+
+print(name + ", what would you like from our menu today? Here is what we are serving.\n" + menu)
+
+order = input()
+
+price = 5
+
+quantity = input("How many coffees would you like?\n")
+
+total_price = price * int(quantity)
+
+print("Sounds good... your " + quantity + " " + order + "will be ready for you in a moment." + "\nYour total comes to: KES " + str(total_price))
+
+
+
+
+
