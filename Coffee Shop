@@ -7,21 +7,44 @@ print("Hello there, welcome to Hugo's Coffee Shop!!!)
 
 name = input("What is your name?\n")
 
-print("Hello " + name + ", thank you for coming in today.\n\n")
+if name == "Ben" or name == "Patricia" or name == "Loki" :
+    evil_status = input("Are you evil?\n")
+    good_deeds = int(input("How many good deeds have you done today?\n"))
 
-menu = "Cappucino, Latte, Black Coffee, Espresso"
+    if evil_status == "Yes" and good deeds < 4:
+        print("You are not welcome here!!" + name + " Get out!!")
+        exit()
+    else:
+        print("Oh, so you are one of those good ones. Come on in!!!")
+else:
+    print("Hello " + name + ", thank you for coming in today.\n\n")
 
-print(name + ", what would you like from our menu today? Here is what we are serving.\n" + menu)
+menu = "Cappucino, Latte, Black Coffee, Espresso, Frappucino"
 
-order = input()
+#Ask the customer what they would like from the menu and store in the variable order
+order = input((name + ", what would you like from our menu today? Here is what we are serving.\n" + menu))
 
-price = 5
+if order == "Frappucino" :
+    price = 13
+elif order == "Black Coffee" :
+    price = 5
+elif order = "Latte" :
+    whipped_cream = input("Would you like whipped cream?\nYes or no: ")
+    if whipped_cream == "Yes":
+        price = 11
+    else:
+        price = 8
+else:
+    price = 10
 
+#Ask the customer how many coffees they would like and store it in the variable Quantity
 quantity = input("How many coffees would you like?\n")
 
 total_price = price * int(quantity)
 
 print("Sounds good... your " + quantity + " " + order + "will be ready for you in a moment." + "\nYour total comes to: KES " + str(total_price))
+
+
 
 
 
