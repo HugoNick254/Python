@@ -1,0 +1,28 @@
+#Python Compound Interest Calculator
+
+principle = 0
+rate = 0
+time = 0
+
+while principle <= 0:
+    print("Principle cannot be less than or equal to zero!")
+    if principle <= 0:
+        principle = float(input("Enter the principle amount: "))
+print(f"Your principle amount is KES {principle:,.2f}.")
+
+while rate <= 0:
+    print("The interest rate cannot be less than or equal to zero!")
+    if rate <= 0:
+        rate = float(input("Enter your interest rate per annum: "))
+print(f"Your interest rate is {rate:.1f} % per annum.")
+
+while time <= 0:
+    print("The time cannot be less than or equal to zero!")
+    if time <= 0:
+        time = int(input("Enter the time in year/s: "))
+
+print(f"Your time is {time} year/s.")
+
+total_amount = principle * pow((1 + rate/100), time) 
+
+print(f"Your total amount for a principle of KES {principle:,.2f} at an interest rate of {rate:.1f} % per annum for {time} year/s is KES {total_amount:,.2f}.")
